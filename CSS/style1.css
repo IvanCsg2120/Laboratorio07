@@ -1,0 +1,275 @@
+/* ======= ESTILO PROFESIONAL - INSPIRADO EN INITIAL D ======= */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Rajdhani:wght@600&display=swap');
+
+:root {
+  --color-fondo: #0e0e10;
+  --color-primario: #d62828;     /* rojo racing */
+  --color-secundario: #1b1b1f;   /* gris oscuro metálico */
+  --color-acento: #f2f2f2;       /* blanco suave */
+  --color-texto: #e5e5e5;
+  --sombra: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ======= ENCABEZADO ======= */
+header {
+  background: linear-gradient(90deg, #101014, #18181d);
+  color: var(--color-acento);
+  text-align: center;
+  padding: 25px 10px;
+  border-bottom: 3px solid var(--color-primario);
+  box-shadow: 0 3px 6px var(--sombra);
+}
+
+header h1 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2.2em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ======= MENÚ ======= */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--color-acento);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 6px 0;
+  transition: 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primario);
+  transition: width 0.3s;
+}
+
+nav a:hover::after,
+nav a.activo::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: var(--color-primario);
+}
+
+/* ======= HERO ======= */
+.hero {
+  background:--color-acento;
+  text-align: center;
+  padding: 100px 20px;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.hero h2, .hero p, .hero a {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2.8em;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1em;
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero .btn {
+  display: inline-block;
+  background: var(--color-primario);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.hero .btn:hover {
+  background: #a81e1e;
+  transform: scale(1.05);
+}
+
+/* ======= CONTENIDO ======= */
+.contenedor {
+  max-width: 1100px;
+  margin: 50px auto;
+  background: var(--color-secundario);
+  border-radius: 10px;
+  padding: 40px 25px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.contenedor h2 {
+  color: var(--color-primario);
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: uppercase;
+}
+
+/* ======= TARJETAS ======= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #141418;
+  border: 1px solid #222;
+  border-left: 4px solid var(--color-primario);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, border-color 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #ff4b4b;
+}
+
+.card h3 {
+  font-family: 'Rajdhani', sans-serif;
+  color: var(--color-primario);
+  margin-bottom: 10px;
+}
+
+/* ======= TABLAS ======= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 14px 10px;
+  border-bottom: 1px solid #333;
+  text-align: left;
+}
+
+th {
+  background: var(--color-primario);
+  color: white;
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: uppercase;
+}
+
+td {
+  background: #19191d;
+}
+
+/* ======= FORMULARIO ======= */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 500;
+  color: var(--color-acento);
+  font-size: 0.95em;
+}
+
+input, select, textarea {
+  background: #121214;
+  border: 1px solid #2a2a2d;
+  color: var(--color-texto);
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--color-primario);
+  outline: none;
+}
+
+.btn {
+  background: var(--color-primario);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.btn:hover {
+  background: #a81e1e;
+  transform: scale(1.03);
+}
+
+/* ======= PIE DE PÁGINA ======= */
+footer {
+  background: #101014;
+  color: #bbb;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9em;
+  border-top: 2px solid #1e1e22;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero h2 {
+    font-size: 2em;
+  }
+
+  .contenedor {
+    padding: 25px;
+  }
+}
