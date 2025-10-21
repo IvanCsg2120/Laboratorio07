@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | Feria Académica 2025</title>
+    <link rel="stylesheet" href="CSS/style1.css">
+</head>
+<body>
+    <header>
+        <h1>Registro en la Feria</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="programas.html">Programas</a></li>
+                <li><a href="charlas.html">Charlas</a></li>
+                <li><a href="registro.html" class="activo">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contenedor">
+        <h2>Formulario de Registro</h2>
+        <form class="formulario">
+            <label>Nombre Completo:</label>
+            <input type="text" placeholder="Ingresa tu nombre completo" required>
+
+            <label>Correo Electrónico:</label>
+            <input type="email" placeholder="ejemplo@correo.com" required>
+
+            <label>Carrera de Interés:</label>
+            <select required>
+                <option value="">Seleccione una opción</option>
+                <option>Ingeniería en Sistemas</option>
+                <option>Ingeniería Civil</option>
+                <option>Lic. en Logística</option>
+            </select>
+
+            <label>Comentarios:</label>
+            <textarea rows="4" placeholder="Escribe tus comentarios..."></textarea>
+
+            <button type="submit" class="btn">Enviar Registro</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Universidad Tecnológica de Panamá</p>
+    </footer>
+</body>
+</html>
